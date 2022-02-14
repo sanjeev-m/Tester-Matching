@@ -40,5 +40,7 @@ The app defines following CRUD APIs.
 2. Start the springboot application
 3. Open the Terminal and run:  <i> ng serve </i>
     
-# Sample test
+### Test Instructions:
+![image](https://user-images.githubusercontent.com/99636443/153822980-7cbe7b2c-7650-4642-b39b-30ce9360faf0.png)
+
 ![image](https://user-images.githubusercontent.com/99636443/153822809-fc08bd2d-6ecd-4037-a0fa-7b9b7973bb90.png)
