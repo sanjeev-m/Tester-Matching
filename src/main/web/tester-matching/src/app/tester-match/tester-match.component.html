@@ -1,0 +1,65 @@
+<div style="padding: 20px;">
+    <mat-card-header>
+        <mat-card-title>Tester Match</mat-card-title>
+    </mat-card-header>
+    <div class="example-button-row">
+        <mat-form-field appearance="fill" style="padding: 5px">
+            <mat-label>Select Country</mat-label>
+
+            <mat-select multiple [(ngModel)]="countriesSelected">
+                <mat-option [value]="1" (click)="selectAllCountries(countryEv)"
+                            #countryEv
+                >SelectAll
+                </mat-option>
+                <mat-option *ngFor="let country of countries" [value]="country">{{country}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" style="padding: 5px">
+            <mat-label>Select Device</mat-label>
+            <mat-select multiple [(ngModel)]="devicesSelected">
+                <mat-option [value]="1" (click)="selectAllDevices(deviceEv)"
+                            #deviceEv
+                >SelectAll
+                </mat-option>
+
+                <mat-option *ngFor="let device of devices" [value]="device">{{device.description}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="getTesterMatch()">Search</button>
+        <button mat-raised-button color="primary" (click)="resetTesterMatch()">Reset</button>
+    </div>
+    <div *ngIf="dataSource && testerMatchResponseList.length > 0" style="padding: 20px;">
+        <table mat-table [dataSource]="dataSource"
+               class="mat-elevation-z8">
+
+            <!-- User Column -->
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> User Name</th>
+                <td mat-cell *matCellDef="let element"> {{getFullName(element)}} </td>
+            </ng-container>
+
+            <!-- Country Column -->
+            <ng-container matColumnDef="country">
+                <th mat-header-cell *matHeaderCellDef> Country</th>
+                <td mat-cell *matCellDef="let element"> {{element.country}} </td>
+            </ng-container>
+
+            <!-- Device Column -->
+            <ng-container matColumnDef="description">
+                <th mat-header-cell *matHeaderCellDef> Device</th>
+                <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+            </ng-container>
+
+            <!-- Bugs Column -->
+            <ng-container matColumnDef="bugsCount">
+                <th mat-header-cell *matHeaderCellDef> No.Of Bugs</th>
+                <td mat-cell *matCellDef="let element"> {{element.bugsCount}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumnsMat"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumnsMat;"></tr>
+        </table>
+    </div>
+
+</div>

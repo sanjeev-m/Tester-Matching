@@ -1,0 +1,45 @@
+{
+  "devices": [
+    {
+      "id": "2",
+      "name": "iPhone 4S"
+    },
+    {
+      "id": "3",
+      "name": "iPhone 5"
+    },
+    {
+      "id": "4",
+      "name": "Galaxy S3"
+    },
+    {
+      "id": "5",
+      "name": "Galaxy S4"
+    },
+    {
+      "id": "6",
+      "name": "Nexus 4"
+    },
+    {
+      "id": "7",
+      "name": "Droid Razor"
+    },
+    {
+      "id": "8",
+      "name": "Droid DNA"
+    },
+    {
+      "id": "9",
+      "name": "HTC One"
+    },
+    {
+      "id": "10",
+      "name": "iPhone 3"
+    }
+  ],
+  "countries": [
+    "US",
+    "GB",
+    "JP"
+  ]
+}

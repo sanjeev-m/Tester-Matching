@@ -1,0 +1,15 @@
+import { Component } from '@angular/core';
+import {FormControl} from "@angular/forms";
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'tester-matching';
+  toppings = new FormControl();
+  toppingList: string[] = ['Select all','Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
+  selected: string[] = ['Select all']
+
+}
