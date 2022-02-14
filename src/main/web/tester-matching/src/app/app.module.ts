@@ -12,6 +12,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
 import {MatTableModule} from "@angular/material/table";
+import {MatCheckboxModule} from "@angular/material/checkbox";
 
 let MaterialModule;
 
@@ -31,7 +32,8 @@ let MaterialModule;
         HttpClientModule,
         MatCardModule,
         MatButtonModule,
-        MatTableModule
+        MatTableModule,
+        MatCheckboxModule
     ],
   providers: [],
   bootstrap: [AppComponent]
