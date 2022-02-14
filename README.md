@@ -35,7 +35,7 @@ The app defines following CRUD APIs.
                 ]
         }
     
-###Execution Steps:
+### Execution Steps:
 1. Set Up the PostgreSQL with the SQL script: DB\ddl-dml.sql 
 2. Start the springboot application
 3. Open the Terminal and run:  <i> ng serve </i>
